@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- <title>weatherAppV2</title>
+
+    <link rel="stylesheet" href="css/style.css"> -->
+    <script src="js/script.js" defer></script>
+
+    <title>Travel Tour Finder</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" 
+    integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+  </head>
+  <body>
+<!-- ----------------------------------- Booking Form Section ----------------------------------- -->
+<section class="booking">
+    <div class="booking-row">
+        <div class="container">
+            <div class="form-header">
+                <h2>Book a trip now!</h2>
+                <p>Whoever you are, whatever you seek, it all starts from here.</p>
+            </div>
+            <hr>
+            <div class="form-container">
+              <form action="#" id="form">       
+                <div class="guest-detail">
+                    <div class="form-group guest ">
+                        <label for="fullname">
+                            Complete Name:
+                        </label>
+                            <input type="text" id="fullname" class="form-control" placeholder="Enter your complete name">
+                        <span class="error-msg">This field cannot be empty</span>
+                    </div> 
+                    <div class="form-group">
+                        <label for="email">
+                            Your Email:
+                        </label>
+                            <input type="text" id="email" class="form-control" placeholder="Enter your email">
+                        <span class="error-msg">This field cannot be empty</span>
+                    </div>
+                </div>
+                <div class="check-in-out">
+                    <div class="form-group">
+                        <label for="checkin"> Check-in date:</label>
+                        <div class="form-group form-group-check-in-out">
+                            <input type="text" id="check-in" class="form-control">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span class="error-msg">This field cannot be empty</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout"> Check-out date:</label>
+                        <div class="form-group form-group-check-out-out">
+                            <input type="text" id="check-out" class="form-control">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span class="error-msg">This field cannot be empty</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-adults-children">
+                    <div class="form-group">
+                        <label for="place">Select Place: </label>
+                        <select name="" class="form-control" id="place">
+                            <option value="">Choose a place from the list</option>
+                            <option value="NCR">Manila</option>
+                            <option value="CAR">Baguio</option>
+                            <option value="Region-1">La Union</option>
+                            <option value="Region-2">Tuguegarao</option>
+                            <option value="Region-3">Pampanga</option>
+                            <option value="Region-4">Calamba</option>
+                            <option value="Mimaropa">Calapan</option>
+                            <option value="Region-5">Legaspi</option>
+                            <option value="Region-6">Iloilo City</option>
+                            <option value="Region-7">Cebu City</option>
+                            <option value="Region-8">Tacloban City</option>
+                            <option value="Region-70">Pagadian City</option>
+                            <option value="Region-10">Cagayan de Oro City</option>
+                            <option value="Region-11">Davao City</option>
+                            <option value="Region-12">Koronadal City</option>
+                            <option value="Region-13">Butuan City</option>
+                            <option value="BARMM">Cotabato City</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="adults"> Adults: </label>
+                        <input type="number" id="adult" name="total_adults" placeholder="2" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="children"> Children: </label>
+                        <input type="number" id="child" name="total_children" placeholder="0" min="0">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="travelling"> Travelling for: </label>
+                    <label for="work" class="radio-label">
+                        <input type="radio" name="travel" id="work">
+                        Work
+                    </label>
+                    <label for="leisure" class="radio-label">
+                        <input type="radio" name="travel" id="leisure">
+                        Leisure
+                    </label>
+                    <span class="error-msg">This field cannot be empty</span>  
+                </div>
+                <div class="buttons">
+                    <button class="btn submit-btn">
+                        Submit your booking
+                    </button>
+                </div>
+    
+              </form>
+            </div>
+        </div> 
+        <!-- weather app start -->
+        <div class="booking-weather">
+          
+            <div class="card">
+              <div class="search">
+                <input type="text" class="search__bar" placeholder="SEARCH" />
+                <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"></path></svg></button>
+              </div>
+              <div class="weather loading">
+                <h2 class="city">Weather in Manila</h2>
+                <h1 class="temp">51°C</h1>
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/04d.png" alt="weather" class="icon">
+                <div class="description">Sunny</div>
+                </div>
+                <div class="humidity">Humidity:90%</div>
+                <div class="wind">Wind Speed: 5.8kmh</div>
+              </div>
+            </div>
+        </div>
+      <!-- weather app end --> 
+    </div>
+</section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./bookingForm.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+<!-- ----------------------------------- End of Booking Form Section ----------------------------------- --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <!-- JavaScript Bundle with Popper -->
+
+  </body>
+</html>
